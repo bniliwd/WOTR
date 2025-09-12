@@ -1,0 +1,14 @@
+﻿{
+
+    "strings": [
+
+        {
+            "Key": "HomebrewArchtypes_MythicAbilityMythicCrossbow",
+            "Value": "弩箭训练（神话）"
+        },
+        {
+            "Key": "HomebrewArchtypes_MythicAbilityMythicCrossbowDesc",
+            "Value": "现在，你是使用弩的大师了。\n效果：使用弩时，你可以在{g|Encyclopedia:Damage}伤害检定{/g}上附加{g|Encyclopedia:Dexterity}敏捷{/g}调整值。"
+        }
+	]	
+}

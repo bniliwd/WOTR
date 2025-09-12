@@ -1,0 +1,20 @@
+{
+
+"_#ArrayMergeSettings": "Replace",
+        "Components": [
+            {
+                "$type": "a0867cbb551bf6d48a90b28a30193a2e, MetamagicRodMechanics",
+                "m_Flags": "0",
+                "name": "$MetamagicRodMechanics$465e8dee-5c1d-49d4-a5b5-dcb8fc2fb097",
+                "PrototypeLink": {
+                    "guid": "",
+                    "name": ""
+                },
+                "m_Overrides": [],
+                "Metamagic": "Piercing",
+                "MaxSpellLevel": "3",
+                "m_RodAbility": "!bp_fc7bd8b05d6147aab2d8b4378801db05",
+                "m_AbilitiesWhiteList": []
+            }
+        ]
+}

@@ -1,0 +1,65 @@
+{
+  "AssetId": "cdee36f2f56e48a9af7b6d1eb9bb2f6b",
+  "Data": {
+    "$type": "cb208b98ceacca84baee15dba53b1979, BlueprintFeature",
+    "PrototypeLink": "",
+    "m_Overrides": [
+      "$AddProficiencies$391a3a40-573c-4675-9a6e-bc0de28246b2"
+    ],
+    "Components": [
+      {
+        "$type": "5fa95b92f4e484742ad84c926183372c, AddProficiencies",
+        "m_Flags": 0,
+        "name": "$AddProficiencies$391a3a40-573c-4675-9a6e-bc0de28246b2",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_RaceRestriction": null,
+        "ArmorProficiencies": [],
+        "WeaponProficiencies": [
+          "Crossbow"
+        ]
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Icon": {
+      "guid": "eba3d40eaa80da840b9e96b48db90613",
+      "fileid": 21300000
+    },
+    "HideInUI": true,
+    "HideInCharacterSheetAndLevelUp": true,
+    "HideNotAvailibleInUI": false,
+    "Groups": [],
+    "Ranks": 1,
+    "ReapplyOnLevelUp": false,
+    "IsClassFeature": true,
+    "IsPrerequisiteFor": []
+  },
+  "Meta": {
+    "ShadowDeleted": false
+  }
+}

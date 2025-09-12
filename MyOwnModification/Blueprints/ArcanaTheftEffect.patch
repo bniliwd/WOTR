@@ -1,0 +1,178 @@
+{
+
+"_#ArrayMergeSettings": "Replace",
+
+"Components": [
+      {
+        "$type": "317417736594fa843918ddbcfeb74a76, SpellListComponent",
+        "m_Flags": 0,
+        "name": "$SpellListComponent$f743cfcc-fbb7-442e-92cd-5d55d31e8a09",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_SpellList": "!bp_4d72e1e7bd6bc4f4caaea7aa43a14639",
+        "SpellLevel": 4
+      },
+      {
+        "$type": "66e032e5cf38801428940a1a0d14b946, AbilityEffectRunAction",
+        "m_Flags": 0,
+        "name": "$AbilityEffectRunAction$d521b394-6659-412d-bbec-4bbc7e46760f",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "SavingThrowType": "Unknown",
+        "Actions": {
+          "Actions": [
+            {
+              "$type": "920d409ea2c340eea999f494c1d51cb7, ContextActionDispelMagic",
+              "name": "$ContextActionDispelMagic$5624ca0d-6e63-4b8e-8d5c-6f387209a158",
+              "m_StopAfterCountRemoved": true,
+              "m_CountToRemove": {
+                "ValueType": "Simple",
+                "Value": 1,
+                "ValueRank": "Default",
+                "ValueShared": "Damage",
+                "Property": "None",
+                "m_CustomProperty": null,
+                "m_AbilityParameter": "Level",
+                "PropertyName": "Value1"
+              },
+              "m_BuffType": "FromSpells",
+              "m_MaxSpellLevel": {
+                "ValueType": "Simple",
+                "Value": 0,
+                "ValueRank": "Default",
+                "ValueShared": "Damage",
+                "Property": "None",
+                "m_CustomProperty": null,
+                "m_AbilityParameter": "Level",
+                "PropertyName": "Value1"
+              },
+              "m_UseMaxCasterLevel": false,
+              "m_MaxCasterLevel": {
+                "ValueType": "Simple",
+                "Value": 0,
+                "ValueRank": "Default",
+                "ValueShared": "Damage",
+                "Property": "None",
+                "m_CustomProperty": null,
+                "m_AbilityParameter": "Level",
+                "PropertyName": "Value1"
+              },
+              "m_CheckType": "CasterLevel",
+              "m_Skill": "Unknown",
+              "CheckBonus": 0,
+              "ContextBonus": {
+                "ValueType": "Simple",
+                "Value": 0,
+                "ValueRank": "Default",
+                "ValueShared": "Damage",
+                "Property": "None",
+                "m_CustomProperty": null,
+                "m_AbilityParameter": "Level",
+                "PropertyName": "Value1"
+              },
+              "Schools": [],
+              "Descriptor": {
+                "m_IntValue": 0
+              },
+              "OnSuccess": {
+                "Actions": []
+              },
+              "OnFail": {
+                "Actions": []
+              },
+              "OnlyTargetEnemyBuffs": true,
+              "OnlyEnemyAreaEffects": false,
+              "CheckSchoolOrDescriptor": false,
+              "OneRollForAll": false,
+              "m_CloneBuffsToCaster": true
+            }
+          ]
+        }
+      },
+      {
+        "$type": "adebf26e6552f8840b0e2d1d61a21ef4, AbilityDeliverTouch",
+        "m_Flags": 0,
+        "name": "$AbilityDeliverTouch$22be7cb2-d4ed-49c8-bf38-276c5a38a75a",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_TouchWeapon": "!bp_bb337517547de1a4189518d404ec49d4"
+      },
+      {
+        "$type": "bbf7e743804d40a47bde0b27174f33a9, SpellComponent",
+        "m_Flags": 0,
+        "name": "$SpellComponent$8c26aa18-cf91-42c4-92f3-af4e8f4c0fae",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "School": "Abjuration"
+      },
+      {
+        "$type": "91216784d99a12e428bf782c8a8c7f5c, SpellDescriptorComponent",
+        "m_Flags": 0,
+        "name": "$SpellDescriptorComponent$1a697794-62e1-488f-a5e6-aa0f10b7dab7",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "Descriptor": {
+          "m_IntValue": 0
+        }
+      },
+      {
+        "$type": "c788cf748ec86bc45b986ac4de28cf45, AbilitySpawnFx",
+        "m_Flags": 0,
+        "name": "$AbilitySpawnFx$59b5d495-c0d6-48fd-b524-1552ac8ba875",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "PrefabLink": {
+          "AssetId": "3eda0e7f710821045a35ebe432af667c"
+        },
+        "Time": "OnApplyEffect",
+        "Anchor": "SelectedTarget",
+        "WeaponTarget": "None",
+        "DestroyOnCast": false,
+        "Delay": 0.0,
+        "PositionAnchor": "None",
+        "OrientationAnchor": "None",
+        "OrientationMode": "Copy"
+      },
+      {
+        "$type": "04f031e209c83d74e94fd97295f30aea, AbilityTargetIsAlly",
+        "m_Flags": 0,
+        "name": "$AbilityTargetIsAlly$e904e9f3-ba8b-497c-8b7d-b6a206e3c08a",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "Not": true
+      },
+      {
+        "$type": "317417736594fa843918ddbcfeb74a76, SpellListComponent",
+        "m_Flags": 0,
+        "name": "$SpellListComponent$d2eae62d-4a11-41c4-b1be-55f833a09f4b",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_SpellList": "!bp_cf20c10b131344c1a61b75e9cc4a4c13",
+        "SpellLevel": 5
+      }
+    ],
+}

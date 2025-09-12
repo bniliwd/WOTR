@@ -1,0 +1,24 @@
+{
+
+"_#ArrayMergeSettings": "Union",
+"m_Overrides": [
+    "$LootItemsPackFixed$1ea36e0c-bae0-4125-b5ab-e843918f648b"
+],
+"Components": [
+    {
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$1ea36e0c-bae0-4125-b5ab-e843918f648b",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_d1605b9f9a5a74c46a0dde19f01eae40",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    }
+]
+}
