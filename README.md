@@ -1,2 +1,2 @@
-# WOTR
-MyOwnMods--Bugfix or Modification
+# 正义之怒mod
+自存内容，修改简单bug或者做些改善游戏体验的修改
