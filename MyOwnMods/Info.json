@@ -1,0 +1,10 @@
+﻿{
+  "Id": "MyOwnMods",
+  "DisplayName": "My Own Mods",
+  "Author": "ROBOLUTION",
+  "Version": "1.0.0",
+  "ManagerVersion": "0.32.4",
+  "Requirements": [],
+  "AssemblyName": "MyOwnMods.dll",
+  "EntryMethod": "MyOwnMods.Main.Load"
+}
