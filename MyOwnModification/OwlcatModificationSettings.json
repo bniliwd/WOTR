@@ -62,6 +62,30 @@
 		{
             "Guid": "094b6278f7b570f42aeaa98379f07cf2",
             "Filename": "CompletelyNormalSpellFeat.patch"
+        },
+		{
+            "Guid": "9edaf8d72271d2e45a5f9a4c7362cc1a",
+            "Filename": "StorytellerVendorTable.patch"
+        },
+		{
+            "Guid": "7188029fda598f749a9dfbf23bec9bdc",
+            "Filename": "MarksmansHatItem.patch"
+        },
+		{
+            "Guid": "30bbe160980b63b4a9a4c8234318edfc",
+            "Filename": "GlovesOfTheScribeItem.patch"
+        },
+		{
+            "Guid": "34682af5f1b1a814bb174077dc3b4ee2",
+            "Filename": "RubyPhoenixItem.patch"
+        },
+		{
+            "Guid": "f614ae47f0d385445ac647c6ba6e2d26",
+            "Filename": "RubyPhoenixFeature.patch"
+        },
+		{
+            "Guid": "ad08a9676a9be2c46ac512aae0151c35",
+            "Filename": "ArtifactRonneck.patch"
         }
     ]
 }

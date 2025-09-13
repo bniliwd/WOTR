@@ -1,0 +1,52 @@
+{
+  "AssetId": "23d5c9f47e5248178fe3579b012c5e84",
+  "Data": {
+    "$type": "ea93079875e0ccc4d89c634346321dd6, BlueprintEquipmentEnchantment",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$AddStatBonusEquipment$d30e36cb-a5dc-4eaf-a41f-c7b056bb983a"
+    ],
+    "Components": [
+      {
+        "$type": "b67ba4ab98ca6ef42b016d0be90db08c, AddStatBonusEquipment",
+        "name": "$AddStatBonusEquipment$d30e36cb-a5dc-4eaf-a41f-c7b056bb983a",
+        "m_Overrides": [],
+        "Descriptor": "UntypedStackable",
+        "Stat": "Dexterity",
+        "Value": 8
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_EnchantName": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Description": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Prefix": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_Suffix": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      "Shared": null
+    },
+    "m_EnchantmentCost": 1,
+    "m_IdentifyDC": 5
+  }
+}

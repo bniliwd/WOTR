@@ -67,6 +67,36 @@
           "m_Loot": null
         },
         "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$38cfdab3-e5ee-4a07-b505-86404a672280",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_e82d860e41a13534ea605fa0b00a9bb0",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$0c83836e-f28e-4cd9-9080-e1d9e5600d20",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_7188029fda598f749a9dfbf23bec9bdc",
+          "m_Loot": null
+        },
+        "m_Count": 1
     }
 ]
 }
