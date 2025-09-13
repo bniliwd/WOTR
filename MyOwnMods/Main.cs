@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using Kingmaker;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -55,8 +55,19 @@ namespace MyOwnMods
         [HarmonyPatch(typeof(AbilityData))]
         static class IsActionFullRound_Patch
         {
-            public static bool CanOverwriteFullRound(AbilityData __instance)
+            public static bool OverwriteFullRound(AbilityData __instance)
             {
+				/**
+                 * 1.非自发施法
+                 * 2.或无超魔列表
+                 * 3.或原定义是整轮
+                 * 不可以重写动作类型
+                 */
+                if (!__instance.IsSpontaneous
+                    || __instance.MetamagicData?.NotEmpty != true
+                    || __instance.Blueprint.IsFullRoundAction)
+                    return false;
+                
                 UnitMechanicFeatures features = __instance.Caster?.State.Features;
                 MetamagicData metamagicData = __instance.MetamagicData;
                 bool favorite;
@@ -82,15 +93,10 @@ namespace MyOwnMods
                 }
 
                 /**
-                 * 1.自发施法
-                 * 2.法术为超正常或有对应偏好超魔
-                 * 3.原定义不是整轮
-                 * 则可以重写动作类型
+                 * 4.法术为超正常或有对应偏好超魔
+                 * 可以重写动作类型
                  */
-                if (__instance.IsSpontaneous
-                        && __instance.MetamagicData?.NotEmpty == true
-                        && favorite
-                        && !__instance.Blueprint.IsFullRoundAction)
+                if (favorite)
                     return true;
 
                 return false;
@@ -100,10 +106,11 @@ namespace MyOwnMods
             [HarmonyPostfix]
             public static void RequireFullRoundAction(AbilityData __instance, ref bool __result)
             {
+                //原来就不需要整轮的不判断
                 if (!__result)
                     return;
 
-                if (CanOverwriteFullRound(__instance))
+                if (OverwriteFullRound(__instance))
                     __result = false;
             }
 
@@ -112,11 +119,11 @@ namespace MyOwnMods
             //public static void GetDefaultActionType(AbilityData __instance, ref UnitCommand.CommandType __result)
             //{
 
-            //    Log(_modEntry, "GetDefaultActionType In1：" + Main.Enabled + "---" + (j++));
+            //    Log("GetDefaultActionType In1：" + "---" + (j++));
             //    if (__result != UnitCommand.CommandType.Standard)
             //        return;
 
-            //    if (CanOverwriteFullRound(__instance))
+            //    if (OverwriteFullRound(__instance))
             //        __result = __instance.Blueprint.ActionType;
             //}
         }
