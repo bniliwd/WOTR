@@ -1,0 +1,88 @@
+{
+"_#ArrayMergeSettings": "Replace",
+"Components": [
+      {
+        "$type": "83cca565d0954cdbbf35ab3fd0d9b69f, AddMetamagicFeat",
+        "m_Flags": 0,
+        "name": "$AddMetamagicFeat$9d3e4706-f657-499f-b774-f719bd221cda",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "Metamagic": "CompletelyNormal"
+      },
+      {
+        "$type": "3eff78016821c464391135dd266415f8, RecommendationRequiresSpellbook",
+        "m_Flags": 0,
+        "name": "$RecommendationRequiresSpellbook$003a67ca-568f-47e8-86e2-37bfbb86dc68",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": []
+      },
+      {
+        "$type": "9e1ba60ad05361f4d9c4f98c0dfd501e, PrerequisitePlayerHasFeature",
+        "m_Flags": 0,
+        "name": "$PrerequisitePlayerHasFeature$e658be25-c826-44f4-afe4-31cbcae6581f",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "Group": "All",
+        "CheckInProgression": false,
+        "HideInUI": false,
+        "IsFeatureSelectionWhiteList": false,
+        "m_Feature": "!bp_e9298851786c5334dba1398e9635a83d"
+      },
+      {
+        "$type": "d7efbadbcef1e5149b9a1681f615e6a4, RecommendationHasClasses",
+        "m_Flags": 0,
+        "name": "$RecommendationHasClasses$116428aa-3018-4cc5-a726-73e833e4d455",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_RecommendedClasses": [],
+        "m_ContraditionClasses": [
+          "!bp_48ac8db94d5de7645906c7d0ad3bcfbd",
+          "!bp_f7d7eb166b3dd594fb330d085df41853",
+          "!bp_3adc3439f98cb534ba98df59838f02c7",
+          "!bp_e8f21e5b58e0569468e420ebea456124",
+          "!bp_a406d6ebea5c46bba3160246be03e96f",
+          "!bp_0937bec61c0dabc468428f496580c721",
+          "!bp_42a455d9ec1ad924d889272429eb8391"
+        ]
+      },
+      {
+        "$type": "4b6c2ac95f357d845ae3a30d6fc6641a, RecommendationNoFeatFromGroup",
+        "m_Flags": 0,
+        "name": "$RecommendationNoFeatFromGroup$191dcad0-33c1-428d-9150-01f226ff107f",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Features": [
+          "!bp_f0310af68c7142cda950d61244cb0cff"
+        ],
+        "m_FeaturesExlude": [],
+        "GoodIfNoFeature": false
+      },
+	  {
+        "$type": "6d43a0c88e994d04bd2859978dec9337, FeatureTagsComponent",
+        "m_Flags": 0,
+        "name": "$FeatureTagsComponent$d3fb8567-078a-440b-91fe-8bba5a77caf1",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "FeatureTags": "Magic, Metamagic"
+      }
+    ],
+	"HideNotAvailibleInUI": true
+}

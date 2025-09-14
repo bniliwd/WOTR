@@ -1,0 +1,120 @@
+{
+
+"_#ArrayMergeSettings": "Union",
+"m_Overrides": [
+	"$LootItemsPackFixed$38cfdab3-e5ee-4a07-b505-86404a672280",
+	"$LootItemsPackFixed$0c83836e-f28e-4cd9-9080-e1d9e5600d20",
+	"$LootItemsPackFixed$d6adcb43-5b8e-47a3-810c-c2b43a292a5e",
+	"$LootItemsPackFixed$d37e25ca-bf8a-42d7-b36c-99ca69e533cb",
+	"$LootItemsPackFixed$fd8c0f7e-bdf7-4905-a206-a9c457ad06a1",
+	"$LootItemsPackFixed$a74ae084-bdd7-4912-b691-8bfa4b70fad6",
+	"$LootItemsPackFixed$815ef089-b9b8-4211-a8f7-91f3fb3336de"
+],
+"Components": [
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$0c83836e-f28e-4cd9-9080-e1d9e5600d20",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_7188029fda598f749a9dfbf23bec9bdc",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$d6adcb43-5b8e-47a3-810c-c2b43a292a5e",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_30bbe160980b63b4a9a4c8234318edfc",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$d37e25ca-bf8a-42d7-b36c-99ca69e533cb",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_34682af5f1b1a814bb174077dc3b4ee2",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$fd8c0f7e-bdf7-4905-a206-a9c457ad06a1",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_140e0480b4c1b5747b70f66e31d5d94b",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$a74ae084-bdd7-4912-b691-8bfa4b70fad6",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_a96caf050601a694fa919478bbd51332",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$815ef089-b9b8-4211-a8f7-91f3fb3336de",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_cfc64eff4b9ddef46b8eb0edd411466f",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$e15b51b4-77ba-4e48-9932-a7b828b30be6",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_e9c38a2a8d25ddf44a12e57ed6f003f7",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    }
+]
+}

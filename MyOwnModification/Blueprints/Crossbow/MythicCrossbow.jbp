@@ -1,0 +1,85 @@
+{
+  "AssetId": "43c5e9ffcc54c6b4882fda8d84663aae",
+  "Data": {
+    "$type": "cb208b98ceacca84baee15dba53b1979, BlueprintFeature",
+    "PrototypeLink": null,
+    "m_Overrides": [
+      "$PrerequisiteFeature$4617a5b2-7392-42eb-bf60-5eea421129c8",
+      "$AnyWeaponDamageStatReplacement$796c502d-20f7-4933-aab5-ab9b1c85b29f"
+    ],
+    "Components": [
+      {
+        "$type": "17030ee91bfc7f24e93d3b6fa583dd09, PrerequisiteFeature",
+        "m_Flags": 0,
+        "name": "$PrerequisiteFeature$4617a5b2-7392-42eb-bf60-5eea421129c8",
+        "PrototypeLink": {
+          "guid": null,
+          "name": null
+        },
+        "m_Overrides": [],
+        "Group": "All",
+        "CheckInProgression": false,
+        "HideInUI": false,
+        "m_Feature": "!bp_f7de245bb20f12f47864c7cb8b1d1abb"
+      },
+      {
+        "$type": "61c3c6437aa50674b9fdac581a5900c9, WeaponTypeDamageStatReplacement",
+        "name": "$WeaponTypeDamageStatReplacement$68045043-3f0e-418f-8a2d-c93851360cf7",
+        "m_Overrides": [],
+        "Stat": "Dexterity",
+        "Category": "LightCrossbow",
+        "OnlyOneHanded": false,
+        "TwoHandedBonus": false
+      },
+	  {
+        "$type": "61c3c6437aa50674b9fdac581a5900c9, WeaponTypeDamageStatReplacement",
+        "name": "$WeaponTypeDamageStatReplacement$68045043-3f0e-418f-8a2d-c93851360cf8",
+        "m_Overrides": [],
+        "Stat": "Dexterity",
+        "Category": "HeavyCrossbow",
+        "OnlyOneHanded": false,
+        "TwoHandedBonus": false
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "HomebrewArchtypes_MythicAbilityMythicCrossbow",
+      "m_OwnerString": "43c5e9ffcc54c6b4882fda8d84663aae",
+      "m_OwnerPropertyPath": "m_DisplayName",
+      "m_JsonPath": "",
+      
+    },
+    "m_Description": {
+      "m_Key": "HomebrewArchtypes_MythicAbilityMythicCrossbowDesc",
+      "m_OwnerString": "43c5e9ffcc54c6b4882fda8d84663aae",
+      "m_OwnerPropertyPath": "m_Description",
+      "m_JsonPath": "",
+      
+    },
+    "m_DescriptionShort": {
+      "m_Key": "",
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "",
+      "m_JsonPath": "",
+      
+    },
+    "m_Icon": {
+      "guid": "8caa05fdede890c47819c45ccfa0380a",
+      "fileid": 21300000
+    },
+    "HideInUI": false,
+    "HideInCharacterSheetAndLevelUp": false,
+    "HideNotAvailibleInUI": false,
+    "Groups": [
+      "MythicFeat"
+    ],
+    "Ranks": 1,
+    "ReapplyOnLevelUp": false,
+    "IsClassFeature": true,
+    "IsPrerequisiteFor": null
+  },
+  "Meta": {
+    "ShadowDeleted": false
+  }
+}

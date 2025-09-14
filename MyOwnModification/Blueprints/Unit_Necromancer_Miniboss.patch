@@ -1,0 +1,38 @@
+{
+
+	"_#ArrayMergeSettings": "Replace",
+    "Body": {
+      "DisableHands": false,
+      "m_EmptyHandWeapon": "!bp_20375b5a0c9243d45966bd72c690ab74",
+      "m_PrimaryHand": "!bp_d11f7fe181741b448982980cd0d32751",
+      "m_SecondaryHand": null,
+      "m_PrimaryHandAlternative1": null,
+      "m_SecondaryHandAlternative1": null,
+      "m_PrimaryHandAlternative2": null,
+      "m_SecondaryHandAlternative2": null,
+      "m_PrimaryHandAlternative3": null,
+      "m_SecondaryHandAlternative3": null,
+      "ActiveHandSet": 0,
+      "m_AdditionalLimbs": [],
+      "m_AdditionalSecondaryLimbs": [],
+      "m_Armor": null,
+      "m_Shirt": null,
+      "m_Belt": "!bp_5e94d9ac3448c774db72a51007aab1df",
+      "m_Head": null,
+      "m_Glasses": null,
+      "m_Feet": null,
+      "m_Gloves": null,
+      "m_Neck": null,
+      "m_Ring1": null,
+      "m_Ring2": null,
+      "m_Wrist": null,
+      "m_Shoulders": null,
+      "m_QuickSlots": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+}

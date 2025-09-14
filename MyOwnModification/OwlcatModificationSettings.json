@@ -1,0 +1,119 @@
+{
+    "BundlesLayout": {
+        "m_Guids": [],
+        "m_Bundles": []
+    },
+    "BundleDependencies": {
+        "m_List": []
+    },
+    "BlueprintPatches": [
+		{
+            "Guid": "41a7f08a27e04909aea1c43cd1895260",
+            "Filename": "Rod_LesserPiercingBuff.patch"
+        },
+        {
+            "Guid": "a644f678adbf4d25aae4f5b1b9d06e86",
+            "Filename": "Rod_NormalPiercingBuff.patch"
+        },
+        {
+            "Guid": "84b6421e9e1b4b3e8963ff12c35aab23",
+            "Filename": "Rod_GreaterPiercingBuff.patch"
+        },
+        {
+            "Guid": "9ee0f6745f555484299b0a1563b99d81",
+            "Filename": "ExtraMythicFeat.patch"
+        },
+		{
+            "Guid": "136adc54467964446b2e790c1698d93a",
+            "Filename": "CrossbowBonuses.patch"
+        },
+		{
+            "Guid": "1440703181bc6e54487b4673e73af34e",
+            "Filename": "CrossbowBonusesLesser.patch"
+        },
+		{
+            "Guid": "9db109eee03524f4aa89881c4539a14d",
+            "Filename": "Equipment_CloakOfBloodScentFeature.patch"
+        },
+		{
+            "Guid": "17979886c1eb45b694d95537d785c614",
+            "Filename": "Spell_ArcanaTheftEffect.patch"
+        },
+		{
+            "Guid": "98a5a678a1b69b248b672d106553ad9a",
+            "Filename": "EldritchArcaneAccuracyAbility.patch"
+        },
+		{
+            "Guid": "faabd2cc67efa4646ac58c7bb3e40fcc",
+            "Filename": "Spell_Prayer.patch"
+        },
+		{
+            "Guid": "cf86e52d03964ac4af5203ab478deba7",
+            "Filename": "Ring_InstantTriumphEnchantment.patch"
+        },
+		{
+            "Guid": "536e0ffdc574a9647beaa66745c7b5dc",
+            "Filename": "Chapter3VendorTableExotic.patch"
+        },
+		{
+            "Guid": "d8b6c5c0356a8da49a619117bf15d199",
+            "Filename": "Chapter3VendorTableRanged.patch"
+        },
+		{
+            "Guid": "094b6278f7b570f42aeaa98379f07cf2",
+            "Filename": "CompletelyNormalSpellFeat.patch"
+        },
+		{
+            "Guid": "9edaf8d72271d2e45a5f9a4c7362cc1a",
+            "Filename": "StorytellerVendorTable.patch"
+        },
+		{
+            "Guid": "7188029fda598f749a9dfbf23bec9bdc",
+            "Filename": "Equipment_MarksmansHatItem.patch"
+        },
+		{
+            "Guid": "30bbe160980b63b4a9a4c8234318edfc",
+            "Filename": "Equipment_GlovesOfTheScribeItem.patch"
+        },
+		{
+            "Guid": "34682af5f1b1a814bb174077dc3b4ee2",
+            "Filename": "Equipment_RubyPhoenixItem.patch"
+        },
+		{
+            "Guid": "f614ae47f0d385445ac647c6ba6e2d26",
+            "Filename": "Equipment_RubyPhoenixFeature.patch"
+        },
+		{
+            "Guid": "ad08a9676a9be2c46ac512aae0151c35",
+            "Filename": "Artifact_RonnecksSacrifice.patch"
+        },
+		{
+            "Guid": "d6301782519486e4aacdca6fa3140452",
+            "Filename": "Unit_Necromancer_Miniboss.patch"
+        },
+		{
+            "Guid": "082edd80ca45af84ab602fbe06e53f55",
+            "Filename": "Unit_Xantir.patch"
+        },
+		{
+            "Guid": "b77c75af5cbea5a4db030f3e0331c693",
+            "Filename": "Unit_HundredFaces.patch"
+        },
+		{
+            "Guid": "aedf061b223b6d54e8ffae6175515b29",
+            "Filename": "Unit_Ygefeles.patch"
+        },
+		{
+            "Guid": "570125aa0b4e41c8851437fd07e67692",
+            "Filename": "Loot_PlayfulDarkess.patch"
+        },
+		{
+            "Guid": "2d9c8adc444adfb4e903fbd1bbd489e6",
+            "Filename": "Weapon_MasteryItem.patch"
+        },
+		{
+            "Guid": "60baa63bd4acf9f4f898603965ed36bb",
+            "Filename": "Weapon_MasteryTripImmunityFeature.patch"
+        }
+    ]
+}

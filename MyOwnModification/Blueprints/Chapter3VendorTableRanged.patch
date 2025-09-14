@@ -1,0 +1,42 @@
+{
+
+"_#ArrayMergeSettings": "Union",
+"m_Overrides": [
+	"$LootItemsPackFixed$db82adc2-66a2-4168-9181-645523ca73a7",
+	"$LootItemsPackFixed$8902dc54-2c4f-4192-bd52-fb94794b3243",
+    "$LootItemsPackFixed$a74ae084-bdd7-4912-b691-8bfa4b70fad6",
+	"$LootItemsPackFixed$815ef089-b9b8-4211-a8f7-91f3fb3336de"
+],
+"Components": [
+    {
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$db82adc2-66a2-4168-9181-645523ca73a7",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_16f5cce89bad4d840bf2447b76454fc8",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    },
+	{
+		"$type": "9a9cba603f85c634690eb67962fdf792, LootItemsPackFixed",
+        "name": "$LootItemsPackFixed$8902dc54-2c4f-4192-bd52-fb94794b3243",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "m_Item": {
+          "m_Type": "Item",
+          "m_Item": "!bp_8762d9897514dd241b19e32ee9cf3f54",
+          "m_Loot": null
+        },
+        "m_Count": 1
+    }
+]
+}

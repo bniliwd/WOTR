@@ -1,0 +1,31 @@
+{
+
+	"_#ArrayMergeSettings": "Replace",
+	
+    "m_Icon": {
+      "guid": "de6423058b7fa4249ace18180094f4df",
+      "fileid": 21300000
+    },
+	"m_VisualParameters": {
+      "m_Projectiles": [],
+      "m_WeaponAnimationStyle": "None",
+      "m_SpecialAnimation": "None",
+      "m_WeaponModel": {
+        "AssetId": "c2fcd283372cb3842955b410770f2cca"
+      },
+      "m_WeaponBeltModelOverride": null,
+      "m_WeaponSheathModelOverride": null,
+      "m_OverrideAttachSlots": false,
+      "m_PossibleAttachSlots": [],
+      "m_ReachFXThresholdBonus": 0.0,
+      "m_SoundSize": "None",
+      "m_SoundType": "None",
+      "m_WhooshSound": "",
+      "m_MissSoundType": "None",
+      "m_EquipSound": "",
+      "m_UnequipSound": "",
+      "m_InventoryEquipSound": "",
+      "m_InventoryPutSound": "",
+      "m_InventoryTakeSound": ""
+    }
+}

@@ -1,0 +1,115 @@
+{
+
+	"_#ArrayMergeSettings": "Replace",
+    "Components": [
+      {
+        "$type": "25d172d2be8f52f468b2050d14d59806, AddFactContextActions",
+        "m_Flags": 0,
+        "name": "$AddFactContextActions$72314671-5896-44f4-bef8-eea35bd0317d",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "m_Overrides": [],
+        "Activated": {
+          "Actions": [
+            {
+              "$type": "5d13a597de91e4746b804f8233518523, ContextActionApplyBuff",
+              "name": "$ContextActionApplyBuff$a45b5cbb-a95c-419d-b0c4-800a05d79611",
+              "m_Buff": "!bp_7ac8effd6341443d98da735b965b0176",
+              "Permanent": true,
+              "UseDurationSeconds": false,
+              "DurationValue": {
+                "Rate": "Rounds",
+                "DiceType": "Zero",
+                "DiceCountValue": {
+                  "ValueType": "Simple",
+                  "Value": 0,
+                  "ValueRank": "Default",
+                  "ValueShared": "Damage",
+                  "Property": "None",
+                  "m_CustomProperty": null,
+                  "m_AbilityParameter": "Level"
+                },
+                "BonusValue": {
+                  "ValueType": "Simple",
+                  "Value": 0,
+                  "ValueRank": "Default",
+                  "ValueShared": "Damage",
+                  "Property": "None",
+                  "m_CustomProperty": null,
+                  "m_AbilityParameter": "Level"
+                },
+                "m_IsExtendable": true
+              },
+              "DurationSeconds": 0.0,
+              "IsFromSpell": false,
+              "IsNotDispelable": false,
+              "ToCaster": false,
+              "AsChild": true,
+              "SameDuration": false
+            },
+            {
+              "$type": "5d13a597de91e4746b804f8233518523, ContextActionApplyBuff",
+              "name": "$ContextActionApplyBuff$11a5f931-9aad-49ea-9ec8-597647f84486",
+              "m_Buff": "!bp_1533e782fca42b84ea370fc1dcbf4fc1",
+              "Permanent": true,
+              "UseDurationSeconds": false,
+              "DurationValue": {
+                "Rate": "Rounds",
+                "DiceType": "Zero",
+                "DiceCountValue": {
+                  "ValueType": "Simple",
+                  "Value": 0,
+                  "ValueRank": "Default",
+                  "ValueShared": "Damage",
+                  "Property": "None",
+                  "m_CustomProperty": null,
+                  "m_AbilityParameter": "Level"
+                },
+                "BonusValue": {
+                  "ValueType": "Simple",
+                  "Value": 0,
+                  "ValueRank": "Default",
+                  "ValueShared": "Damage",
+                  "Property": "None",
+                  "m_CustomProperty": null,
+                  "m_AbilityParameter": "Level"
+                },
+                "m_IsExtendable": true
+              },
+              "DurationSeconds": 0.0,
+              "IsFromSpell": false,
+              "IsNotDispelable": false,
+              "ToCaster": false,
+              "AsChild": true,
+              "SameDuration": false
+            }
+          ]
+        },
+        "Deactivated": {
+          "Actions": [
+            {
+              "$type": "23ddfb172c2d3c144ab007dec380d712, ContextActionRemoveBuff",
+              "name": "$ContextActionRemoveBuff$ba385f9b-470d-4729-85f0-38af5bca8f24",
+              "m_Buff": "!bp_1533e782fca42b84ea370fc1dcbf4fc1",
+              "RemoveRank": false,
+              "ToCaster": false,
+              "OnlyFromCaster": false
+            },
+            {
+              "$type": "23ddfb172c2d3c144ab007dec380d712, ContextActionRemoveBuff",
+              "name": "$ContextActionRemoveBuff$714f1323-fb35-4692-8c76-79ea80a2cb3b",
+              "m_Buff": "!bp_7ac8effd6341443d98da735b965b0176",
+              "RemoveRank": false,
+              "ToCaster": false,
+              "OnlyFromCaster": false
+            }
+          ]
+        },
+        "NewRound": {
+          "Actions": []
+        }
+      }
+    ]
+}

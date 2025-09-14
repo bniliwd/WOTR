@@ -1,0 +1,10 @@
+{
+    "UniqueName": "MyOwnModification",
+    "Version": "1.0",
+    "DisplayName": "Mutiple modification for better gameplay.",
+    "Description": "1.Make crossbow great again.",
+    "Author": "me",
+    "Repository": "",
+    "HomePage": "",
+    "Dependencies": []
+}
