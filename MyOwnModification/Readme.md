@@ -16,4 +16,7 @@ e82d860e41a13534ea605fa0b00a9bb0 狙杀死神(手套)---取乐
 34682af5f1b1a814bb174077dc3b4ee2 红宝石护腕---说书人  
 459cff3f67aea3846a228e0119f5e522 梦想家的微笑(+2运气)---伊吉沃里斯  
 a96caf050601a694fa919478bbd51332 神话杀手---说书人  
-cfc64eff4b9ddef46b8eb0edd411466f 旋雷重弩---说书人  
+cfc64eff4b9ddef46b8eb0edd411466f 旋雷重弩  
+
+blueprints\Weapons\Items\Unique\DLC2\StaffOfTheWhisperingSouls 灵魂絮语 +2木棍 +4智力(亵渎)  
+blueprints\Weapons\Enchantments\Unique\CallLightningCritical  熊神之怒 弯道 使用者+动物伙伴+伤害  
