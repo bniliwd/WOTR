@@ -1,20 +1,23 @@
+using Epic.OnlineServices.AntiCheatCommon;
 using HarmonyLib;
 using Kingmaker;
-using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Classes.Spells;
-using Kingmaker.Blueprints.Items.Components;
-using Kingmaker.Blueprints.JsonSystem;
+using Kingmaker.Blueprints.Items.Equipment;
+using Kingmaker.Craft;
 using Kingmaker.EntitySystem.Entities;
 using Kingmaker.Items;
+using Kingmaker.PubSubSystem;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Abilities;
-using Kingmaker.UnitLogic.Commands.Base;
+using Kingmaker.UnitLogic.Abilities.Blueprints;
+using Kingmaker.Utility;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using UnityModManagerNet;
-using static UnityModManagerNet.UnityModManager;
 
 namespace MyOwnMods
 {
@@ -57,22 +60,23 @@ namespace MyOwnMods
         {
             public static bool OverwriteFullRound(AbilityData __instance)
             {
-				/**
+                /**
                  * 1.非自发施法
-                 * 2.或无超魔列表
-                 * 3.或原定义是整轮
+                 * 2.无超魔列表
+                 * 3.原定义是整轮
                  * 不可以重写动作类型
                  */
                 if (!__instance.IsSpontaneous
                     || __instance.MetamagicData?.NotEmpty != true
                     || __instance.Blueprint.IsFullRoundAction)
                     return false;
-                
+
                 UnitMechanicFeatures features = __instance.Caster?.State.Features;
                 MetamagicData metamagicData = __instance.MetamagicData;
                 bool favorite;
 
-                if (metamagicData.Has(Metamagic.CompletelyNormal)) {
+                if (metamagicData.Has(Metamagic.CompletelyNormal))
+                {
                     favorite = true;
                 }
                 else if (features == null
@@ -88,7 +92,9 @@ namespace MyOwnMods
                     || (metamagicData.Has(Metamagic.Intensified) && !(bool)features.FavoriteMetamagicIntensified))
                 {
                     favorite = false;
-                } else {
+                }
+                else
+                {
                     favorite = true;
                 }
 
@@ -113,19 +119,70 @@ namespace MyOwnMods
                 if (OverwriteFullRound(__instance))
                     __result = false;
             }
+        }
 
-            //[HarmonyPatch("GetDefaultActionType")]
-            //[HarmonyPostfix]
-            //public static void GetDefaultActionType(AbilityData __instance, ref UnitCommand.CommandType __result)
-            //{
+        [HarmonyPatch(typeof(CraftRoot))]
+        static class CraftRoot_Patch
+        {
+            [HarmonyPatch(nameof(CraftRoot.CheckCraftAvail))]
+            [HarmonyPrefix]
+            public static bool CheckCraftAvail(CraftRoot __instance, UnitEntityData crafter, CraftItemInfo craftInfo, bool isInProgress, ref CraftAvailInfo __result)
+            {
+                //不是卷轴就用原逻辑
+                if (craftInfo.Item.Type != UsableItemType.Scroll) return true;
 
-            //    Log("GetDefaultActionType In1：" + "---" + (j++));
-            //    if (__result != UnitCommand.CommandType.Standard)
-            //        return;
+                CraftAvailInfo craftAvailInfo = new();
+                BlueprintAbility blueprintAbility = craftInfo.Item?.Ability;
+                if (blueprintAbility != null && TryFindAbilityInSpellbooks(crafter, blueprintAbility, out var spellbook))
+                {
+                    CraftRequirements[] array = (CraftRequirements[])(AccessTools.Field(typeof(CraftRoot), "m_ScrollsRequirements")?.GetValue(__instance));
+                    int minSpellLevel = spellbook.GetMinSpellLevel(blueprintAbility);
+                    if (minSpellLevel < 0) minSpellLevel = spellbook.GetMinSpellLevel(blueprintAbility.Parent);
+                    CraftRequirements craftRequirements = ((minSpellLevel >= 0 && minSpellLevel < array.Length) ? array[minSpellLevel] : new CraftRequirements());
+                    ItemsCollection inventory = Game.Instance.Player.Inventory;
+                    craftAvailInfo.IsHaveFeature = craftRequirements.RequiredFeature == null || crafter.HasFact((BlueprintFeature)craftRequirements.RequiredFeature);
+                    craftAvailInfo.IsHaveItem = craftRequirements.RequiredItems.Count == 0 || inventory.ContainsAtLeastOneOf(craftRequirements.RequiredItems);
+                    craftAvailInfo.IsHaveResources = isInProgress || craftInfo.CraftCost.Count == 0 || CheckResources(craftInfo);
+                }
+                else
+                {
+                    craftAvailInfo.IsKnowAbility = false;
+                }
 
-            //    if (OverwriteFullRound(__instance))
-            //        __result = __instance.Blueprint.ActionType;
-            //}
+                craftAvailInfo.Info = craftInfo;
+                __result = craftAvailInfo;
+                return false;
+            }
+
+            private static bool TryFindAbilityInSpellbooks(UnitEntityData crafter, BlueprintAbility abillity, out Spellbook spellbook)
+            {
+                spellbook = null;
+                using (PooledHashSet<Spellbook> pooledHashSet = PooledHashSet<Spellbook>.Get())
+                {
+                    foreach (Spellbook spellbook2 in crafter.Spellbooks)
+                    {
+                        if (spellbook2.IsKnown(abillity) || (abillity.Parent != null && spellbook2.IsKnown(abillity.Parent)))
+                        {
+                            pooledHashSet.Add(spellbook2);
+                        }
+                    }
+                    spellbook = pooledHashSet.MinBy((Spellbook x) => x.GetMinSpellLevel(abillity));
+                }
+                return spellbook != null;
+            }
+
+            private static bool CheckResources(CraftItemInfo itemInfo)
+            {
+                ItemsCollection inventory = Game.Instance.Player.Inventory;
+                foreach (BlueprintIngredient.Reference item in itemInfo.CraftCost)
+                {
+                    if (!inventory.Contains((BlueprintIngredient)item))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
         }
     }
 }
