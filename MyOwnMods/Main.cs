@@ -314,5 +314,40 @@ namespace BetterGameplay
                 return false;
             }
         }
+
+        [HarmonyPatch(typeof(WeaponFocusParametrized))]
+        static class WeaponFocusParametrized_Patch
+        {
+            private static readonly Dictionary<string, PropertyInfo> _propertyCache = [];
+        
+            [HarmonyPatch(nameof(WeaponFocusParametrized.OnEventAboutToTrigger))]
+            [HarmonyPrefix]
+            public static bool OnEventAboutToTrigger(WeaponFocusParametrized __instance, RuleCalculateAttackBonusWithoutTarget evt)
+            {
+                FeatureParam baseParam = (FeatureParam)(GetCachedProperty("Param")?.GetValue(__instance));
+                UnitFact baseFact = (UnitFact)(GetCachedProperty("Fact")?.GetValue(__instance));
+                if (baseFact == null) return true;
+        
+                bool hasMythicFocus = evt.Initiator.Progression.Features.Enumerable.Any((Feature p) => p.Param == baseParam && p.Blueprint == __instance.MythicFocus);
+                int bonus = hasMythicFocus ? baseFact.NameForAcronym.EndsWith("Greater", StringComparison.Ordinal) ? 3 : 2 : 1;
+                if (evt.Weapon.Blueprint.Type.Category == baseParam)
+                {
+                    evt.AddModifier(bonus, baseFact, __instance.Descriptor);
+                }
+                return false;
+            }
+        
+            public static PropertyInfo GetCachedProperty(string name)
+            {
+                if (!_propertyCache.TryGetValue(name, out var field))
+                {
+                    field = typeof(UnitFactComponentDelegate<EmptyComponentData>).GetProperty(name, BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.NonPublic);
+                    _propertyCache[name] = field;
+                }
+                return field;
+            }
+        
+        }
     }
 }
+
