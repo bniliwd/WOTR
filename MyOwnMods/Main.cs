@@ -348,6 +348,18 @@ namespace BetterGameplay
             }
         
         }
+
+        [HarmonyPatch(typeof(Logger))]
+        static class Logger_Patch
+        {
+            [HarmonyPatch(nameof(Logger.Log), [typeof(LogChannel), typeof(object), typeof(LogSeverity), typeof(Exception), typeof(object), typeof(object[])])]
+            [HarmonyPrefix]
+            public static bool LogPrefix()
+            {
+                return false;
+            }
+        }
     }
 }
+
 
