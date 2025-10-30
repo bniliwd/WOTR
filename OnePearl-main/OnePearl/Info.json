@@ -1,0 +1,12 @@
+﻿{
+  "Id": "OnePearl",
+  "DisplayName": "The One Pearl",
+  "Author": "AlterAsc",
+  "Version": "1.0.3",
+  "ManagerVersion": "0.32.4",
+  "Requirements": [],
+  "AssemblyName": "OnePearl.dll",
+  "EntryMethod": "OnePearl.Main.Load",
+  "HomePage": "https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/613",
+  "Repository": "https://raw.githubusercontent.com/alterasc/OnePearl/main/Repository.json"
+}
