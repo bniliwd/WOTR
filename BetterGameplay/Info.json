@@ -1,0 +1,10 @@
+﻿{
+  "Id": "BetterGameplay",
+  "DisplayName": "BetterGameplay",
+  "Author": "ROBOLUTION",
+  "Version": "1.5.5",
+  "ManagerVersion": "0.32.4",
+  "Requirements": [],
+  "AssemblyName": "BetterGameplay.dll",
+  "EntryMethod": "BetterGameplay.Main.Load"
+}

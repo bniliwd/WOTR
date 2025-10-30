@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+		<TargetFramework>net481</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Authors>me</Authors>
+		<BaseOutputPath>bin\</BaseOutputPath>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<WrathPath>G:\SteamLibrary\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed</WrathPath>
+		<SolutionDir>G:\Tools\Microsoft Visual Studio\Repos\BetterGameplay\bin\Debug\net480\</SolutionDir>
+		<WrathInstallPath>G:\SteamLibrary\steamapps\common\Pathfinder Second Adventure\</WrathInstallPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AssemblyPublicizer" Version="1.0.2">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="0Harmony">
+	    <HintPath>$(WrathPath)\UnityModManager\0Harmony.dll</HintPath>
+		<Private>False</Private>
+	  </Reference>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>lib\Assembly-CSharp_public.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="Newtonsoft.Json">
+	    <HintPath>$(WrathPath)\Newtonsoft.Json.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="Owlcat.Runtime.Core">
+	    <HintPath>$(WrathPath)\Owlcat.Runtime.Core.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="Owlcat.Runtime.Validation">
+	    <HintPath>$(WrathPath)\Owlcat.Runtime.Validation.dll</HintPath>
+		  <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.CoreModule">
+	    <HintPath>$(WrathPath)\UnityEngine.CoreModule.dll</HintPath>
+		<Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityModManager">
+	    <HintPath>$(WrathPath)\UnityModManager\UnityModManager.dll</HintPath>
+		<Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Info.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<Target Name="Deploy" AfterTargets="Build">
+		<ItemGroup>
+			<Files Include="$(TargetDir)\**\*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(Files)" DestinationFiles="@(Files->'$(WrathInstallPath)\Mods\$(AssemblyName)\%(RecursiveDir)%(Filename)%(Extension)')" />
+	</Target>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" IncludeAssets="build; contentfiles" Version="0.4.2" PrivateAssets="all" Private="false" />
+	</ItemGroup>
+
+	<Target Name="Publicize" AfterTargets="Clean">
+		<ItemGroup>
+			<Assemblies Include="$(WrathPath)\Assembly-CSharp.dll" />
+		</ItemGroup>
+
+		<PublicizeTask InputAssemblies="@(Assemblies)" OutputDir="$(SolutionDir)lib/" />
+	</Target>
+
+</Project>
