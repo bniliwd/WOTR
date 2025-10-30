@@ -1,0 +1,10 @@
+﻿{
+  "Id": "LogPatch",
+  "DisplayName": "LogPatch",
+  "Author": "ROBOLUTION",
+  "Version": "1.1.2",
+  "ManagerVersion": "0.32.4",
+  "Requirements": [],
+  "AssemblyName": "LogPatch.dll",
+  "EntryMethod": "LogPatch.Main.Load"
+}
