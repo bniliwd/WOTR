@@ -228,6 +228,7 @@ namespace BetterGameplay.Modify
 
             BlueprintFeature morta = GetBlueprint<BlueprintFeature>("1d96c608b7a24b2ca10a0cb1dbf37813");
             morta.HideInUI = true;
+            //TODO 去除此修改 各上buff代码没有不覆盖永久buff的逻辑
             morta.SetComponents(CreateAddFacts(af => af.m_Facts = [GetBlueprintReference<BlueprintUnitFactReference>("1533e782fca42b84ea370fc1dcbf4fc1")]));
         }
 
@@ -372,4 +373,5 @@ namespace BetterGameplay.Modify
                 );
         }
     }
+
 }
